@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+    <title>Pikabot</title>
+</head>
+<body>
+    <div id="buttons">
+        <button id="open">Open all</button><button id="close">Close all</button>
+    </div>
+    <div class="head card" id="head">
+            <h1>Pikabot</h1>
+            <p>Here are some notes for you to control pikabot</p>
+    </div>
+    <div class="card started" id="started">
+            <h1>Get started</h1>
+            <p>Before doing anything, you need to import cytron's own pikabot library</p>
+            <p>press CTRL+SHIFT+I, search for Cytron_pikabot and click install. In your file, paste the code below</p>
+            <p class="code">#include &ltCytron_PikaBot.h&gt</p>
+    </div>
+    <div class="info card motor" id="motor">
+            <h1>Motor</h1>
+            <h3>Setup</h3>
+            <p class="code">Base myMotor(9,3,11,10);</p>
+            <p>the number are the port for the motor</p>
+            <h3>Element for class Bass</h3>
+            <p class="code">myMotor.powerBase(left_speed,right_speed);</p>
+            <p class="code">myMotor.moveForward(speed);</p>
+            <p class="code">myMotor.moveBackward(speed);</p>
+            <p class="code">myMotor.turnRight(speed);</p>
+            <p class="code">myMotor.turnLeft(speed);</p>
+            <p class="code">myMotor.stop();</p>
+    </div>
+    <div class="info card ultrasonic" id="ultrasonic">
+            <h1>Ultrasonic sensor</h1>
+            <h3>Setup</h3>
+            <p class="code">Ultrasonic myUltrasonic(echo,trigger);</p>
+            <p>The default port for these are 4,5</p>
+            <h3>Element for class Ultrasonic;</h3>
+            <p class="code">myUltrasonic.getDistance();</p>
+    </div>
+    <div class="info card button" id="button">
+            <h1>Button</h1>
+            <h3>Setup</h3>
+            <p class="code">Button myButton(pin);</p>
+            <p>default port number is 2</p>
+            <h3>Element for class Button</h3>
+            <p class="code">myButton.isPressed();</p>
+    </div>
+    <div class="info card irline" id="irline">
+            <h1>IRLine sensor</h1>
+            <h3>Setup</h3>
+            <p class="code">IRLine myIRLine(pin);</p>
+            <p>left IRLine sensor is A0 and the right IRLine sensor is A1</p>
+            <h3>Element for IRLine sensor</h3>
+            <p class="code">myIRLine.onLine();</p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
